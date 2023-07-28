@@ -1,49 +1,18 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Together Light
+## Steps to get started
+You can install the app on android by clicking the link below;
+https://drive.google.com/file/d/1OMYJ8OQ8ZpaJgcO41XB3K6QUzDWwAG6I/view?usp=sharing
 
-# Getting Started
-
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Run the app locally
+1. Clone the repo `git clone https://github.com/Irfanwani/togetherlight.git`
+2. `cd togetherlight`.
+3. `npm i` OR `yarn` (whatever you prefer).
+4. For iOS, `cd ios && pod install && cd ..`.
+5. To run on android, `yarn android` (make sure to have development environment setup).
+6. To run on iOS, `yarn ios`(make sure to have development environment setup).
 
 ## Login credentials 
 Username: `Secret Username`
 Password: `secretpassword`
+
+All the features have been implemented (except pagination and the Api doesnot provide the functionality).
