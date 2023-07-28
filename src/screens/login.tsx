@@ -1,10 +1,17 @@
 import {FC, memo, useContext, useState} from 'react';
-import {Alert, Pressable, ScrollView, Text, TextInput} from 'react-native';
+import {
+  Alert,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  ToastAndroid,
+  TouchableOpacity,
+} from 'react-native';
 import {Context} from '../main';
 import styles from '../styles';
-import {LoginProps} from '../types';
 
-const Login: FC<LoginProps> = () => {
+const Login: FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +31,11 @@ const Login: FC<LoginProps> = () => {
     }
 
     setLoggedIn(true);
-    Alert.alert('Login successful!', 'Logged in successfully.');
+    if (Platform.OS == 'ios') {
+      Alert.alert('Login successful!', 'Logged in successfully.');
+    } else {
+      ToastAndroid.show('Login Successful', 500);
+    }
   };
 
   return (
@@ -51,9 +62,9 @@ const Login: FC<LoginProps> = () => {
 
       <Text style={styles.error}>{error}</Text>
 
-      <Pressable style={styles.button} onPress={submit}>
+      <TouchableOpacity style={styles.button} onPress={submit}>
         <Text style={styles.buttontext}>Login</Text>
-      </Pressable>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

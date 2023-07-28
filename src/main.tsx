@@ -26,7 +26,7 @@ const Main: FC = () => {
     <Context.Provider value={{loggedIn, setLoggedIn}}>
       <NavigationContainer>
         <Stack.Navigator>
-          {!loggedIn ? (
+          {loggedIn ? (
             <Stack.Screen
               options={{headerShown: false}}
               name="login"
@@ -39,7 +39,11 @@ const Main: FC = () => {
                 name="posts"
                 component={Posts}
               />
-              <Stack.Screen name="postdetails" component={PostDetails} />
+              <Stack.Screen
+                options={{headerTitle: 'Post Details'}}
+                name="postdetails"
+                component={PostDetails}
+              />
             </>
           )}
         </Stack.Navigator>

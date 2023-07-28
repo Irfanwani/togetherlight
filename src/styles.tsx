@@ -43,6 +43,53 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     color: '#000',
   },
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  empty: {
+    color: '#555',
+    alignSelf: 'center',
+    paddingTop: 30,
+    fontSize: 16,
+  },
+  cardview: {
+    padding: 10,
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    margin: 10,
+  },
+  cardtitle: {
+    fontSize: 18,
+    marginBottom: 10,
+    color: '#004610',
+  },
+  cardbody: {
+    fontSize: 15,
+    color: '#373a33',
+  },
+  reload: {
+    fontSize: 25,
+  },
+  postpage: {
+    flex: 0.7,
+    justifyContent: 'center',
+  },
+  detailrow: {
+    flexDirection: 'row',
+    padding: 30,
+    alignItems: 'center',
+  },
+  detailtitle: {
+    color: '#530c53',
+    fontSize: 25,
+  },
+  detailvalue: {
+    color: '#232623',
+    fontSize: 20,
+    maxWidth: '80%',
+  },
 });
 
 export default styles;
