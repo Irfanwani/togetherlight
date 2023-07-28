@@ -1,8 +1,8 @@
 import {FC, memo, useContext, useState} from 'react';
 import {Alert, Pressable, ScrollView, Text, TextInput} from 'react-native';
+import {Context} from '../main';
 import styles from '../styles';
 import {LoginProps} from '../types';
-import {Context} from '../main';
 
 const Login: FC<LoginProps> = () => {
   const [username, setUsername] = useState('');
@@ -32,13 +32,16 @@ const Login: FC<LoginProps> = () => {
       keyboardShouldPersistTaps="always"
       automaticallyAdjustContentInsets
       contentContainerStyle={styles.wrapper}>
+      <Text style={styles.title}>Login</Text>
       <TextInput
+        placeholderTextColor={'#555'}
         value={username}
         onChangeText={setUsername}
         placeholder="Enter Username"
         style={styles.input}
       />
       <TextInput
+        placeholderTextColor={'#555'}
         secureTextEntry
         value={password}
         onChangeText={setPassword}
